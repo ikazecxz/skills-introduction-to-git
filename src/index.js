@@ -314,19 +314,23 @@ function handleKeyPress(e) {
   if (gameOver) return;
 
   switch (true) {
-    case (e.key === "a" || e.key === "arrowleft"):
+    case (e.key == "a"):
+    case (e.key === "arrowleft"):
       e.preventDefault();
       if (!isPaused) moveLeft();
       break;
-    case (e.key === "d" || e.key === "arrowright"):
+    case (e.key == "d"):    
+    case (e.key === "arrowright"):
       e.preventDefault();
       if (!isPaused) moveRight();
       break;
-    case (e.key === "s" || e.key === "arrowdown"):
+    case (e.key === "s"):
+    case (e.key === "arrowdown"):
       e.preventDefault();
       if (!isPaused) moveDown();
       break;
-    case (e.key === "w" || e.key === "arrowup"):
+    case (e.key === "w"):
+    case (e.key === "arrowup"):
       e.preventDefault();
       if (!isPaused) rotate();
       break;
@@ -334,8 +338,8 @@ function handleKeyPress(e) {
       e.preventDefault();
       if (!isPaused) hardDrop();
       break;
-    case "p":
-    case "P":
+    case (e.key === "p"):
+    case (e.key === "P"):
       e.preventDefault();
       togglePause();
       break;
