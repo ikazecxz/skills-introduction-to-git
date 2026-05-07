@@ -334,8 +334,8 @@ function handleKeyPress(e) {
       e.preventDefault();
       if (!isPaused) hardDrop();
       break;
-    case "p":
-    case "P":
+    case "h":
+    case "h":
       e.preventDefault();
       togglePause();
       break;
