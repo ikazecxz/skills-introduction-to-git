@@ -314,19 +314,19 @@ function handleKeyPress(e) {
   if (gameOver) return;
 
   switch (e.key) {
-    case "j":
+    case "a":
       e.preventDefault();
       if (!isPaused) moveLeft();
       break;
-    case "l":
+    case "d":
       e.preventDefault();
       if (!isPaused) moveRight();
       break;
-    case "k":
+    case "s":
       e.preventDefault();
       if (!isPaused) moveDown();
       break;
-    case "i":
+    case "w":
       e.preventDefault();
       if (!isPaused) rotate();
       break;
