@@ -313,24 +313,24 @@ function updateScore() {
 function handleKeyPress(e) {
   if (gameOver) return;
 
-  switch (true) {
-    case (e.key == "a"):
-    case (e.key === "arrowleft"):
+  switch (e.key.toLowerCase()) {
+    case ("a"):
+    case ("arrowleft"):
       e.preventDefault();
       if (!isPaused) moveLeft();
       break;
-    case (e.key == "d"):    
-    case (e.key === "arrowright"):
+    case ("d"):    
+    case ("arrowright"):
       e.preventDefault();
       if (!isPaused) moveRight();
       break;
-    case (e.key === "s"):
-    case (e.key === "arrowdown"):
+    case ("s"):
+    case ("arrowdown"):
       e.preventDefault();
       if (!isPaused) moveDown();
       break;
-    case (e.key === "w"):
-    case (e.key === "arrowup"):
+    case ("w"):
+    case ("arrowup"):
       e.preventDefault();
       if (!isPaused) rotate();
       break;
@@ -338,8 +338,8 @@ function handleKeyPress(e) {
       e.preventDefault();
       if (!isPaused) hardDrop();
       break;
-    case (e.key === "p"):
-    case (e.key === "P"):
+    case ("p"):
+    case ("P"):
       e.preventDefault();
       togglePause();
       break;
