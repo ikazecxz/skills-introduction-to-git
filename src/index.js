@@ -313,24 +313,20 @@ function updateScore() {
 function handleKeyPress(e) {
   if (gameOver) return;
 
-  switch (e.key) {
-    case "a":
-    case "arrowleft":
+  switch (true) {
+    case (e.key === "a" || e.key === "arrowleft"):
       e.preventDefault();
       if (!isPaused) moveLeft();
       break;
-    case "d":
-    case "arrowright":
+    case (e.key === "d" || e.key === "arrowright"):
       e.preventDefault();
       if (!isPaused) moveRight();
       break;
-    case "s":
-    case "arrowdown": 
+    case (e.key === "s" || e.key === "arrowdown"):
       e.preventDefault();
       if (!isPaused) moveDown();
       break;
-    case "w":
-    case "arrowup":
+    case (e.key === "w" || e.key === "arrowup"):
       e.preventDefault();
       if (!isPaused) rotate();
       break;
